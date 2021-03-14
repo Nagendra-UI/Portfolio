@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Open+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+:root {
+   --priamry-color:rgb(237, 79, 79); 
+   --hover-color: rgb(39, 75, 89);
+
+/* {rgb(240, 109, 116);} */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+/* Navbar Styling */
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 20px 50px;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.max-width {
+    max-width: 1300px; 
+    margin: auto;
+}
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    color: #fff;
+   font-size: 35px;
+   font-weight: bold;
+   z-index: 1;
+}
+
+.navbar .menu li {
+   display: inline-block;
+   list-style: none;
+}
+
+.navbar .menu li a {
+    color: #fff;
+    font-size: 18px;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.4s ease;
+}
+
+.navbar .menu li a:hover {
+    color: var( --priamry-color);
+}
+
+.navbar.sticky li a:hover {
+    color: var( --hover-color);
+}
+
+.navbar.sticky {
+    padding: 10px 50px;
+    background-color: var( --priamry-color);
+}
+
+.dotColor {
+    color: var( --priamry-color);
+}
+
+.navbar .logo span {
+    color: var(--priamry-color);
+}
+
+.navbar.sticky .logo span {
+    color: #fff;
+}
+
+.bar {
+    display: none;
+    font-size: 25px;
+    color: var( --priamry-color);
+
+}
+
+/* home section styles */
+
+.home {
+    display: flex;
+    background: url('img/green-chameleon.jpg') no-repeat center;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    height: 100vh;
+    color: var( --priamry-color);
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home .max-width {
+    margin: auto 0 auto 50px;
+}
+
+.home .home-content  {
+    position: absolute;
+    top: 230px;
+    
+}
+
+.home .home-content .text-1 {
+    font-size: 25px;
+}
+.home .home-content .text-2 {
+    font-size: 70px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+
+.home .home-content .text-3 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span {
+    color:  var(--hover-color);;
+    font-weight: 400;
+}
+
+/* responsive media query */
+
+@media (max-width: 991px){
+    .max-width {
+        padding: 0 50px;
+    }
+       .navbar .logo span {
+        color: #fff;
+}
+
+    .navbar .logo {
+        position: fixed;
+         z-index: 900;
+
+}
+    .bar {
+        display: block;
+        color: white;
+        z-index: 999;
+    }
+
+    .navbar .menu  {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        text-align: center;
+        padding-top: 80px;
+        background-color: var(--priamry-color);
+        transition: all 0.3s ease;
+}
+
+    .navbar .menu.active {
+             left: 0%;
+    }
+
+     .navbar .menu li {
+         display: block;
+         
+    }
+
+       .navbar .menu li a {
+         display: inline-block;
+         margin: 15px 15px;
+        
+    }
+
+         .navbar .menu li a:hover {
+             color:rgb(28, 11, 19);
+        
+    }
+
+
+
+}
