@@ -6,7 +6,6 @@ window.addEventListener('scroll', () => {
     } else {
         navbar.classList.remove('sticky')
     }
-
 })
 
 //-- text effect starts here ----------
@@ -32,10 +31,19 @@ window.addEventListener('scroll', () => {
 // media query active
 
 const menu = document.querySelector('.menu')
-const menuBar = document.getElementById('bar')
+const menuBar = document.getElementById('menu-btn')
+const closeBtn = document.getElementById('close-btn')
 
 menuBar.addEventListener('click', () => {
-    menu.classList.toggle('active');
+    menu.classList.add('active');
+    closeBtn.classList.add('active');
+    menuBar.classList.remove('active');
+})
+
+closeBtn.addEventListener('click', () => {
+    menu.classList.remove('active');
+    closeBtn.classList.remove('active');
+    menuBar.classList.add('active');
 })
 
 
