@@ -273,18 +273,21 @@ section .title::after {
 
         .left, .right {
           transition: transform 0.4s ease;
+          transition: opacity 0.6s ease
     }
 
     .about .about-content .left.onLeft, 
     .skills .skills-content .left.onLeft, 
     .contact .contact-content .left.onLeft {
-        transform: translateX(-1000px)
+        transform: translateX(-1000px);
+        opacity: 1;
     }
 
      .about .about-content .right.onRight, 
      .skills .skills-content .right.onRight, 
     .contact .contact-content .right.onRight {
-        transform: translateX(1000px)
+        transform: translateX(1000px);
+        opacity: 1;
     }
 
     .about .about-content .left, 
@@ -644,6 +647,20 @@ body {
     padding: 10px 25px;
    
 }
+
+ .about .about-content .left.onLeft, 
+    .skills .skills-content .left.onLeft, 
+    .contact .contact-content .left.onLeft {
+        transform: translateX(0);
+        opacity: 0;
+    }
+
+     .about .about-content .right.onRight, 
+     .skills .skills-content .right.onRight, 
+    .contact .contact-content .right.onRight {
+        transform: translateX(0);
+        opacity: 0;
+    }
 
 
  }
