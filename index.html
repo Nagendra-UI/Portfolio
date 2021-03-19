@@ -8,10 +8,12 @@
     <title>My Potfolio Website</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
+    <div class="scroll-up-button">
+        <a href="#home" class="link"><i class="fas fa-angle-up"></i></a>
+    </div>
 
     <!-- navigation section start -->
     <nav class="navbar">
@@ -22,14 +24,12 @@
                     <!-- <a href="#">Port<span>folio</span></a> -->
                 </div>
             </a>
-
             <div class="menu">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Skills</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#home" class="link">Home</a></li>
+                    <li><a href="#about" class="link">About</a></li>
+                    <li><a href="#skills" class="link">Skills</a></li>
+                    <li><a href="#contact" class="link">Contact</a></li>
                 </ul>
             </div>
             <button class="menu-btn active" id="menu-btn"><i class="fas fa-bars"></i></button>
@@ -44,8 +44,8 @@
             <div class="home-content">
                 <div class="text-1">Hello my name is </div>
                 <div class="text-2">Nagendra</div>
-                <div class="text-3">I'm a <span>UI Developer</span></div>
-                <button>Hire Me!</button>
+                <div class="text-3">I'm a <span class="textDev"></span></div>
+                <button><a href="#contact">Hire Me!</a></button>
             </div>
         </div>
     </section>
@@ -53,10 +53,10 @@
         <div class="max-width">
             <h2 class="title"> About</h2>
             <div class="about-content">
-                <div class="column left">
+                <div class="column left onLeft">
                     <img src="img/my_photo.jpg" alt="Nagendra">
                 </div>
-                <div class="column right">
+                <div class="column right onRight">
                     <div class="text">I'm Nagendra and I'm a <span>UI Developer</span></div>
                     <p>UI Developer with 3+ years of professional experiences in User Interface development using Web
                         Technologies. Having Knowledge on implementing Design Patterns. Strong developing experience
@@ -76,7 +76,7 @@
         <div class="max-width">
             <h2 class="title">My Skills</h2>
             <div class="skills-content">
-                <div class="column left">
+                <div class="column left onLeft">
                     <div class="text">My Creative skills and experiences!</div>
                     <p><strong>Work Experince:</strong></p>
                     <p>Working as a UI Developer for Research Wallet Services Pvt.Ltd., Hyderabad from May 2018 to
@@ -85,17 +85,69 @@
                     </p>
                     <p><strong>Web Technologies:</strong> HTML5, CSS3, Bootstrap4, JavaScript ES6, Ajax, Angular6+</p>
                     <p> <strong>Development IDEs:</strong> Sublime, VS Code. </p>
+                    <p> <strong>Designing Applications:</strong> Adobe Illustrator and Adobe Indesign. </p>
 
                     <p><strong>Academic Profile:</strong> B-Tech (Electronics and Communication) Graduate in Trinity
                         College of Engineering and Technology, Peddapally, Karimnagar, Telangana 505172. </p>
                 </div>
-                <div class="column right">
+                <div class="column right onRight">
                     <img src="img/code.jpg" alt="code">
                 </div>
             </div>
         </div>
     </section>
 
+    <section class="contact" id="contact">
+        <div class="max-width">
+            <h2 class="title">Contact Me</h2>
+            <div class="contact-content">
+                <div class="column left onLeft">
+                    <img src="img/contact1.jpg" alt="code">
+                </div>
+                <div class="column right onRight">
+                    <div class="text">Get in Touch</div>
+                    <p>I hereby declare that the above information is true to the best of by knowledge and belief.</p>
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fas fa-user"></i>
+                            <div class="info">
+                                <div class="head">Name</div>
+                                <div class="sub-title">Nagendra B</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-map-marker"></i>
+                            <div class="info">
+                                <div class="head">Address</div>
+                                <div class="sub-title">Hyderabad</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-envelope"></i>
+                            <div class="info">
+                                <div class="head">E-mail</div>
+                                <div class="sub-title">nagendra.bmail@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fab fa-github"></i>
+                            <div class="info">
+                                <div class="head">GitHub</div>
+                                <div class="sub-title"><a
+                                        href="https://github.com/Nagendra-UI/">https://github.com/Nagendra-UI/</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Star here -->
+
+    <footer>
+        <span>Created by Me | <span class="fa fa-copyright"></span> 2021 all rights reserved</span>
+    </footer>
 
     <script src="app.js"></script>
 </body>
